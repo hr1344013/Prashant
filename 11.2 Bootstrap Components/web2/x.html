@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Langauge Translator</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'roboto',sans-serif;
+        }
+        body{
+            height:100vh;
+            background:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .container{
+            width:900px;
+            background:#fff;
+            box-shadow:0 2px 20px rgba(0,0,0,.3);
+            border-radius:5px;
+            overflow:hidden;
+        }
+        .translator_property{
+            border:1px solid #c7c7c783;
+        }
+        .translator_property .nuv_item{
+            display: flex;
+            width: 100%;
+            height:50px;
+            justify-content: space-between;
+            align-items: center;
+            list-style:none;
+            border-bottom:1px solid #c7c7c7;
+            padding:0 20px;
+        }
+        .translator_property .nuv_item li select{
+            outline:none;
+            border-style:none;
+            padding:10px 20px;
+            font-size:17px;
+            font-weight:500px;
+            color:#606060;
+            cursor:pointer;
+            transition: all .3s ease-out;
+        }
+        .transfer_property .nuv_item li select:hover{
+            color:#111;
+        }
+        .box-transfer{
+            font-size:22px;
+            color:#606060;
+            cursor:pointer;
+            transition: all .3s ease-out;
+        }
+        .bx-transfer:hover{
+            color:#111;
+        }
+        .write_box{
+            display:flex;
+        }
+        .Property_from, .Property_trans{
+            width:100%
+        }
+        .write_box textarea{
+            width:100%;
+            border-style: none;
+            outline:none;
+            resize:none;
+            padding:10px 20px;
+            font-size:20px;
+            color:#606060;
+            border-style:250px;
+            position:relative;
+        }
+        .write_box textarea:nth-child(1){
+            border-right:1px solid #c7c7c7;
+        }
+        .write_box .icons{
+            position:absolute;
+            bottom:0;
+            left: 0;
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+        }
+        .icons .bx{
+            width: 35px;
+            height: 35px;
+            text-align:center;
+            line-height: 35px;
+            font-size:18px;
+            color:#000;
+            border-radius:50%;
+            cursor:pointer;
+        }
+        .icons .bx:hover{
+            background:#606060;
+            color:wheat;
+        }
+        .code_length{
+            font-size: 18px;
+            color:#606060;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="translator_property">
+            <ul class="nuv_item">
+                <li>
+                    <select>
+                        <option value="en-gb">English</option>
+                        <option value="en-gb">Bengali</option>
+                        <option value="en-gb">Hindi</option>
+                    </select>
+                    </li>
+                    <li class="bx bx-transfer"></li>
+                    <li>
+                        <select>
+                            <option value="en-gb">Bengali</option>
+                            <option value="en-gb">English</option>
+                            <option value="en-gb">Hindi</option>
+                        </select>
+                        </li>
+            </ul>
+            <div class="write_box">
+                <div class="property_form">
+                    <textarea maxlength="5000" class="fromText" placeholder="write down"></textarea>
+                   <div class="icons">
+                    <span class="bx bx-volume-full"></span>
+                    <div class="code_length">0/5,000</div>
+                    </div>
+                </div>
+                <div class="Property_trans"></div>
+                <textarea class="toTranslate"></textarea>
+                <div class="icons">
+                    <span class="bx bx-volume-full"></span>
+                    <span class="bx bx-copy"></span>
+                    </div>
+    </div>
+        </div>
+        <script src="./language.js"></script>
+        <script src="main.js"></script>
+</body>
+</html>

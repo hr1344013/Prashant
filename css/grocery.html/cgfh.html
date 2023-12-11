@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* height:100%;
+            width:100%; */
+            background-image:url(/Image/washing\ powder.webp);
+            background-position:center;
+            background-size: cover;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            letter-spacing: .5px;
+        }
+        .main{
+            /* height:100%;
+            width:100%;
+            background-image:url(/Image/fruits\ and\ vegetables.jpg);
+            background-position:center;
+            background-size: cover; */
+        }
+        .card-container{
+            width:7px;
+            height:10%;
+            margin: 4rem auto;
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .card{
+            padding:18px;
+            box-shadow: 0 0 .4rem rgba(0 , 0 , 0 , 0.2);
+            transition: .4s ease-in;
+        }
+        .card:hover{
+            background:rgb(226 , 226 , 226);
+        }
+        .card-heading{
+            color:tomato;
+            margin-bottom: .5rem;
+        }
+        .card-body{
+            color:navy;
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+    <div class="card-container">
+        <div class="card">
+        <h3 class="card-heading">card heading</h3>
+            <p class="card-body">this is card body.</p>
+            </div>
+            </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        const cardData = [
+            {
+                haeding:'Bathing Soaps',
+                body:'Makes feel fresh'
+            },
+            {
+                haeding:'Dish bars',
+                body:'Keeps shine in the dishes'
+            },
+            {
+                haeding:'Washing Powders & soaps',
+                body:'keeps the clothes clean'
+            },
+            {
+                haeding:'floor cleaners ',
+                body:'remove dirt from the floors'
+            },
+            {
+                haeding:'Bandages ',
+                body:'thi is card body 5'
+            },
+            {
+                haeding:'Shoe polish and brushes',
+                body:'Make your shoes shine '
+            },
+            {
+                haeding:'Tooth paste',
+                body:'Helps in cleaning your teeth'
+            },
+            {
+                haeding:'Tooth brush & Tongue cleaners',
+                body:'Remove germs from your mouth'
+            },{
+                haeding:'Shampoos',
+                body:'Keeps your hair dandruff free'
+            },{
+                haeding:'Hair oil & Gels ',
+                body:'Make your look shiny'
+            },
+            {
+                haeding:'Facewash',
+                body:'Make your Face dirt free'
+            },{
+                haeding:'Perfumes',
+                body:'Make you smell different'
+            },{
+                haeding:'Creams ',
+                body:'Helps to make you look different from others'
+            },
+            {
+                haeding:'Earbuds and safeticks',
+                body:'Protects your body.'
+            },
+            {
+                haeding:'Moisturizers',
+                body:'Makes your skin smooth and soft'
+            },
+        ]
+        const postcontainer = document.querySelector('.card-container');
+
+        const postMethods = ()=>{
+            cardData.map((postData)=>{
+                const postElement = document.createElement('div');
+                postElement.classList.add('card');
+                postElement.innerHTML =`
+
+                <h3 class="card-heading">${postData.haeding}</h3>
+            <p class="card-body">${postData.body}</p>
+            `
+                postcontainer.appendChild(postElement)
+            })
+        }
+        postMethods()
+        </script>
+</body>
+</html>

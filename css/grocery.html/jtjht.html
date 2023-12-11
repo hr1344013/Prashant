@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* height:100%;
+            width:100%; */
+            background-image:url(/Image/thumb-1920-944488.jpg);
+            background-position:center;
+            background-size: cover;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            letter-spacing: .5px;
+        }
+        .main{
+            /* height:100%;
+            width:100%;
+            background-image:url(/Image/fruits\ and\ vegetables.jpg);
+            background-position:center;
+            background-size: cover; */
+        }
+        .card-container{
+            width:7px;
+            height:10%;
+            margin: 4rem auto;
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .card{
+            padding:29px;
+            box-shadow: 0 0 .4rem rgba(0 , 0 , 0 , 0.2);
+            transition: .4s ease-in;
+        }
+        .card:hover{
+            background:rgb(226 , 226 , 226);
+        }
+        .card-heading{
+            color:black;
+            margin-bottom: .5rem;
+        }
+        .card-body{
+            color:navy;
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+    <div class="card-container">
+        <div class="card">
+        <h3 class="card-heading">card heading</h3>
+            <p class="card-body">this is card body.</p>
+            </div>
+            </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        const cardData = [
+            {
+                haeding:'Wheat',
+                body:'A powder which can  make you strong'
+            },
+            {
+                haeding:'Rice',
+                body:'Looks Crunchy before boiling it.'
+            },
+            {
+                haeding:'Sugar',
+                body:'Add some healthy sweetness in your life'
+            },
+            {
+                haeding:'Flour',
+                body:'Smooth and bright in look'
+            },
+            {
+                haeding:'Dal',
+                body:'Looks yellow and add protein in your life'
+            },
+            {
+                haeding:'Corn-Flakes',
+                body:'thi is card body 6'
+            },
+            {
+                haeding:'Biscuits',
+                body:'Crunchy and with variites in the packet'
+            },
+            {
+                haeding:'Chips',
+                body:'Salted and with a spice sparkle '
+            },{
+                haeding:'Chick peas',
+                body:'Fats free with a helathy body'
+            },{
+                haeding:'Choclates',
+                body:'Dark but makes you feel bright '
+            },
+            {
+                haeding:'Salt',
+                body:'I add taste in everyone  life '
+            },{
+                haeding:'Micture',
+                body:'In a small packet but with various textures'
+            },{
+                haeding:'Fryings',
+                body:'See  magic after frying in oil'
+            },
+            {
+                haeding:'Sweets',
+                body:'Something special for a special person'
+            },
+            {
+                haeding:'Soya chunks ',
+                body:'Very nutritious for the health'
+            },
+        ]
+        const postcontainer = document.querySelector('.card-container');
+
+        const postMethods = ()=>{
+            cardData.map((postData)=>{
+                const postElement = document.createElement('div');
+                postElement.classList.add('card');
+                postElement.innerHTML =`
+
+                <h3 class="card-heading">${postData.haeding}</h3>
+            <p class="card-body">${postData.body}</p>
+            `
+                postcontainer.appendChild(postElement)
+            })
+        }
+        postMethods()
+        </script>
+</body>
+</html>

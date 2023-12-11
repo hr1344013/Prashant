@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* height:100%;
+            width:100%; */
+            background-image:url(/Image/spices.jpg);
+            background-position:center;
+            background-size: cover;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            letter-spacing: .5px;
+        }
+        .main{
+            /* height:100%;
+            width:100%;
+            background-image:url(/Image/fruits\ and\ vegetables.jpg);
+            background-position:center;
+            background-size: cover; */
+        }
+        .card-container{
+            width:7px;
+            height:10%;
+            margin: 4rem auto;
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .card{
+            padding:18px;
+            box-shadow:0 0 .4rem rgba(0 , 0 , 0 , 0.2);
+            transition: .4s ease-in;
+        }
+        .card:hover{
+            background:#FEC260;
+        }
+        .card-heading{
+            color:black;
+            margin-bottom: .5rem;
+        }
+        .card-body{
+            color:#367E18;
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+    <div class="card-container">
+        <div class="card">
+        <h3 class="card-heading">card heading</h3>
+            <p class="card-body">this is card body.</p>
+            </div>
+            </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        const cardData = [
+            {
+                haeding:'Turmeric',
+                body:'Looks yellow but makes a healthy fellow !'
+            },
+            {
+                haeding:'Black Pepper',
+                body:'Spice up Your Life, Black or White!'
+            },
+            {
+                haeding:'Chilli Powder',
+                body:'Ignite Your Palate with Flavor Fire!"'
+            },
+            {
+                haeding:'Corriander',
+                body:' A Burst of Freshness in Every Dish!"'
+            },
+            {
+                haeding:'Cumin',
+                body:' Earthy Warmth in Every Bite!"'
+            },
+            {
+                haeding:'Rose merry',
+                body:'Fragrant Herb, Culinary Poetry!'
+            },
+            {
+                haeding:'Garlic Powderr',
+                body:' Enhancing Every Dish with Ease!'
+            },
+            {
+                haeding:'Cloves',
+                body:'Aromatic Bliss in Every Pinch!"'
+            },{
+                haeding:'Ginger',
+                body:' A Kick of Spice for Your Delight!"'
+            },{
+                haeding:'Bay leaves',
+                body:'Infusing Grace into Every Pot!"'
+            },
+            {
+                haeding:'Nutmeg',
+                body:'A Dash of Warmth in Every Whisk!"'
+            },{
+                haeding:'Oregano',
+                body:'Mediterranean Flair on Your Plate!"'
+            },{
+                haeding:'Chilli Flex',
+                body:'Ignite Your Flavor, Spice Your Style!"'
+            },
+            {
+                haeding:'Fenu greek ',
+                body:'Richness in Every Seed!"'
+            },
+            {
+                haeding:'Thyme',
+                body:'A Herb for Every Culinary Adventure!"'
+            },
+        ]
+        const postcontainer = document.querySelector('.card-container');
+
+        const postMethods = ()=>{
+            cardData.map((postData)=>{
+                const postElement = document.createElement('div');
+                postElement.classList.add('card');
+                postElement.innerHTML =`
+
+                <h3 class="card-heading">${postData.haeding}</h3>
+            <p class="card-body">${postData.body}</p>
+            `
+                postcontainer.appendChild(postElement)
+            })
+        }
+        postMethods()
+        </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0%;
+            padding:0%;
+            font-family:'Josefin-Sans',sans-serif;
+        }
+        body{
+            background-image:url(/Image/fun-hand-drawn-party-seamless-600nw-2120770694.webp);
+            background-position: center;
+            background-position: cover;
+        }
+        .img-gallery{
+            width:80%;
+            margin: 100px auto 50px;
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            grid-gap:30px;
+        }
+        .img-gallery img{
+            width:100%;
+            cursor:pointer;
+        }
+        .img-gallery img:hover{
+            transform:scale(0.8) rotate(-15deg);
+            border-radius:20px;
+            box-shadow:0 32px 75px rgba(68,77,136,0.2);
+        }
+        .full-img{
+            width:100%;
+            height:100vh;
+            background:rgba(0,0,0,0.9);
+            position:fixed;
+            top:0;
+            left:0;
+            display:none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+        .full-img img{
+            width:90%;
+            max-width:500px;
+        }
+        .full-img span{
+            position:absolute;
+            top: 5%;
+            right:5%;
+            font-size: 30px;
+            color:white;
+            cursor:pointer;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="full-img" id="fullImg">
+        <img src="/11.2 Bootstrap Components/web2/phootu/image27-1.png">
+        <span onclick="closeFullImg()">X</span>
+        </div>
+    <div class="img-gallery" id="fullImg">
+        <img src="/Image/Anshi 1.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 2.png" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 3.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 4.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 5.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 6.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 7.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 7.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 8.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 9.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 10.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 11.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 12.jpg"onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi13.jpg" onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 14.jpg"onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 15.jpg"onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 16.png"onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 17.jpg"onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 18.jpg"onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 19.jpg"onclick="openFullImg(this.src)">
+        <img src="/Image/Anshi 20.jpg"onclick="openFullImg(this.src)">
+        </div>
+        <script>
+            var fullImgBox = document.getElementById("fullImgBox");
+            var fullImg = document.getElementById("fullImg");
+
+            function openFullImg(pic){
+                fullImgBox.style.display = "flex";
+                fullImg.src = pic;
+            }
+            function closeFullImg(){
+                fullImgBox.style.display = "none";
+            }
+            </script>
+</body>
+</html>

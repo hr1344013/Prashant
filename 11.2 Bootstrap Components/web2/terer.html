@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Theme</title>
+    <style>
+        *{
+            margin:0%;
+            padding:0%;
+            font-family: 'Josefin-Sans',sans-serif;
+            box-sizing: border-box;
+        }
+        .demo{
+            background-image: url(/Image/changes.jpg);
+            height: 100vh;
+            width:100%;
+            background-position: center;
+            background-size: cover;
+        }
+        nav ul li{
+            display: inline-block;
+            padding:10px 25px;
+            list-style-type: none;
+        }
+        nav{
+            display:flex;
+            padding-left: 8%;
+            padding-top: 45px;
+            padding-right: 8%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav ul li a{
+            color:black;
+            text-transform: capitalize;
+            text-decoration: none;
+            font-family: bold;
+        }
+        nav ul li a:hover{
+            color:#f9004d;
+        }
+        nav span{
+            color:orange;
+        }
+        .content{
+            position:absolute;
+            transform:translate(-50%);
+            top:45%;
+            left: 18%;
+        }
+        h1{
+            color:black;
+            font-size: 75px;
+            margin:20px 0px 20px;
+        }
+        h3{
+            color:black;
+            font-size: 25px;
+            margin-bottom:50px;
+        }
+        h4{
+            color:black;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        p{
+            position:absolute;
+            font-size: 24px;
+        }
+        .container{
+            font-family: 'Brush Script m7', cursive;
+            position: absolute;
+            margin-bottom: 200px;
+            right: 0px;
+            bottom:0px;
+            width: 400px;
+            height: 10px;
+            word-spacing: 5px;
+        }
+        span{
+            color:#f9004d;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <nav>
+            <h2 class="logo">BIRTH DAY <span>THEME</span></h2>
+        <ul>
+            <li><a href="#"><span>Home</span></a></li>
+            <li><a href="/11.2 Bootstrap Components/web2/image 2/theee.html">About</a></li>
+            <li><a href="/11.2 Bootstrap Components/web2/utere.html">Cuteness</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="/11.2 Bootstrap Components/web2/ga.html">Images</a></li>
+            <li><a href="#">Collages</a></li>
+            </ul>
+            </nav>
+            <div class="content">
+                <h4>Happy <span class="auto-type"></span></h4>
+                <h1>Anshita </h1>
+                <h3>Have a Great and happy life ahead. </h3>
+                </div>
+                <div class="container">
+                    <p>
+                        On the special day of yours,<br>
+                   I pray that the lord gives you all<br>
+                             the joy and happiness<br>
+                           that your heart can contain.<br>
+                        Have a memorable Birthday.<br>
+                        </p>
+                        </div>
+        </div>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+                        <script>
+                            var typed = new Typed(".auto-type",{
+                                strings: ["Birth Day .","Born Day."],
+                                typespeed: 90,
+                                backspeed:90,
+                                loop:true
+                            })
+                            </script>
+</body>
+</html>

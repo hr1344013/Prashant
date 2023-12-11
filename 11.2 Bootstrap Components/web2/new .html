@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding:0%;
+            margin:0%;
+            box-sizing: border-box;
+            font-size: 'Josefin-Sans',sans-serif;
+        }
+        .start{
+            height:100vh;
+            width:100%;
+            background-image:url(/Image/market.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .logo{
+            color:black;
+            letter-spacing: 1px;
+            cursor:pointer;
+            font-size:35px;
+        }
+        nav{
+            align-items: center;
+            justify-content:space-between;
+            padding-left:8%;
+            padding-right:8%;
+            display: flex;
+            padding-top: 45px;
+        }
+        nav ul li{
+            padding: 10px 25px;
+            display: inline-block;
+            list-style-type: none;
+        }
+        nav ul li a{
+            color:black;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        span{
+            color:red;
+        }
+        nav ul li a:hover{
+            color:#f9004d;
+            transition:.4s;
+        }
+        .btn{
+            padding:10px 25px;
+            border-radius:30px;
+            font-weight: bold;
+            color:white;
+            background-color:#f9004d;
+            text-decoration:none;
+            transition:transform .4s;
+        }
+        .btn:hover{
+            transform:scale(1.2);
+        }
+        .content{
+            position: absolute;
+            top:40%;
+            left: 30%;
+            transform:translate(-50%);
+        }
+        h1{
+            color:black;
+            size:75px;
+            margin:20px 0px 20px;
+        }
+        h3{
+            color:black;
+            margin-bottom: 50px;
+            font-size:25px;
+        }
+        h4{
+            color:black;
+            font-size: 20px;
+            letter-spacing:2px;
+        }
+        .service{
+            background-color: black;
+            padding:010px 0px;
+            width:100%;
+            background-image: url(/Image/trolley.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .title h2{
+            color:white;
+            font-size:75px;
+            width:1130px;
+            margin:30px auto;
+            text-align:center;
+        }
+        .box{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:400px;
+        }
+        .card{
+            height:295px;
+            width:170px;
+            padding: 20px 35px;
+            /* background:; */
+            border-radius:20px;
+            margin:15px;
+            position: relative;
+            overflow:hidden;
+            text-align:center;
+        }
+        h5{
+            color:#191919;
+                font-size:23px;
+                margin-bottom:15px;
+        }
+        .card i{
+                font-size:50px;
+                display:block;
+                text-align:center;
+                margin:25px 0px;
+                color:#f9004d;
+
+             }
+             .about{
+                width:100%;
+                height:290px;
+                background:#191919;
+                display:flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content:center;
+                background-image: url(/Image/creamy\ pies.jpg);
+            }
+             .about p{
+                color:white;
+                font-size:30px;
+                font-weight:bold;
+                margin-bottom:25px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .about p:hover{
+                color:#f9004d;
+            }
+            .about .button-two{
+                background-color: #f9004d;
+                color:white;
+                text-decoration: none;
+                border:2px solid transparent;
+                font-weight:bold;
+                padding:13px 30px;
+                border-radius:30px;
+                transition:.4s;
+            }
+            .about .button-two:hover{
+                background-color:transparent;
+                border: 2px solid #f9004d;
+                cursor:pointer;
+            }
+            footer{
+                position:relative;
+                width:100%;
+                height:400px;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-image: url(/Image/a5ec674a33cb42f796e5ee0c75f57f52-620x375.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color:black;
+            }
+            footer p:nth-child(1){
+                font-size:30px;
+                color:white;
+                margin-bottom: 20px;
+                font-weight:bold;
+            }
+            footer p:nth-child(2){
+                color:white;
+                font-size:17px;
+                width:500px;
+                text-align:center;
+                line-height: 26px;
+            }
+            .social{
+                display:flex;
+            }
+            .social a{
+                width:45px;
+                height:45px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                background:#f9004d;
+                border-radius: 50%;
+                margin:22px 10px;
+                color:black;
+                text-decoration:none;
+                font-size:20px;
+            }
+            .social a:hover{
+                transform:scale(1.3);
+                transition:.3s;
+            }
+            footer p:hover{
+                color: #FFFACD;
+            }
+            .card h5:hover{
+                color:#B799FF;
+            }
+            .titl2 span:hover{
+                color:#FEFF86;
+            }
+    </style>
+</head>
+<body>
+    <div class="start">
+        <nav>
+            <h2 class="logo"><span>Grocery </span>Shop</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us </a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Description</a></li>
+                </ul>
+                <a href="#" class="btn">Discount</a>
+            </nav>
+            <div class="content">
+                <h4>Hello , Everyone !</h4>
+                <h1><span> Food </span>Mart</h1>
+                <h3>We provide <span class="auto-type"></span></h3>
+                </div>
+        </div>
+        <section>
+            <div class="service">
+                <div class="title">
+                    <h2 class="titl2"><span>Grocery Shop</span></h2>
+                    <div class="box">
+                        <div class="card">
+                            <i class="fa-regular fa-user"></i>
+                            <h5>Vegies</h5>
+                            <div class="para">
+                                <p>
+                                    The things<br>
+                                    which make your<br>
+                                    body fit and healthy.<br>
+                                    </p>
+                                    <p style="text-align : center;">
+                                        <a href="/css/grocery.html/thtt.html"> More about</a>
+                                    </p>
+                            </div>
+                    </div>
+                    <div class="box">
+                        <div class="card">
+                            <i class="fa-regular fa-user"></i>
+                            <h5>Spices</h5>
+                            <div class="para">
+                                <p>
+                                    These are the<br>
+                                    items which <br>
+                                    adds taste in your life.<br>
+                                    </p>
+                                    <p style="text-align : center;">
+                                        <a href="/css/grocery.html/ddk.html"> More about</a>
+                                    </p>
+                            </div>
+                    </div>
+                    <div class="box">
+                        <div class="card">
+                            <i class="fa-regular fa-user"></i>
+                            <h5>Cosmetics</h5>
+                            <div class="para">
+                                <p>
+                                     Products which make <br>
+                                    you look different<br>
+                                    and unique from others .<br>
+                                    </p>
+                                    <p style="text-align : center;">
+                                        <a href="/css/grocery.html/ytutytuy.html"> More about</a>
+                                    </p>
+                            </div>
+                    </div>
+                    <div class="box">
+                        <div class="card">
+                            <i class="fa-regular fa-user"></i>
+                            <h5>Cold Drinks</h5>
+                            <div class="para">
+                                <p>
+                                    remove thirst<br>
+                                    and make the life<br>
+                                    and mood cool.<br>
+                                    </p>
+                                    <p style="text-align : center;">
+                                        <a href="/css/grocery.html/teyety.html"> More about</a>
+                                    </p>
+                            </div>
+                    </div>
+                    <div class="box">
+                        <div class="card">
+                            <i class="fa-regular fa-user"></i>
+                            <h5> Eatables</h5>
+                            <div class="para">
+                                <p>
+                                    Removes hunger<br>
+                                    and prpvide you  energy to<br>
+                                    work more concenteratly<br>
+                                    </p>
+                                    <p style="text-align : center;">
+                                        <a href="/css/grocery.html/jtjht.html"> More about</a>
+                                    </p>
+                            </div>
+                    </div>
+                    <div class="box">
+                        <div class="card">
+                            <i class="fa-regular fa-user"></i>
+                            <h5>Sparkling Supplies</h5>
+                            <div class="para">
+                                <p>
+                                    Provides your<br>
+                                    clothes a <br>
+                                    Sparkling shine like a new one.<br>
+                                    </p>
+                                    <p style="text-align : center;">
+                                        <a href="/css/grocery.html/cgfh.html"> More about</a>
+                                    </p>
+                            </div>
+                    </div>
+                    </div>        
+    </div>
+                </div>
+            </section>
+            <div class="about">
+                <p>Our shop contains a various products of your daily needs<br>
+                          which satisfy yours needs by fulfills your livings .<br>
+                    </p>
+                    <a class="button-two" href="#">Shop</a>
+                </div>
+                <footer>
+                    <p>Food Mart</p>
+                <p><span class="tree"> </span>
+                </p>
+                <div class="social">
+                    <a href="https://www.facebook.com/chandigarhuniversitygharuan/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/chandigarhuniversity/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/Chandigarh_uni/status/1571675485029158913"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p class="end">Copyright By Food Mart.</p>
+                    </footer>
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+            <script>
+                 var typed = new Typed(".auto-type",{
+                                strings: ["  the qulaity Product at the cheap rate.",""],
+                                typespeed: 40,
+                                backspeed:40,
+                                loop:true
+                            })
+                            var typed = new Typed(".tree",{
+                                strings:["We provide a quality product at the cheapest rate which with a familiar nature with our customer",""],
+                                typespeed: 40,
+                                backspeed: 40,
+                                loop: true
+                            })
+        </script>
+</body>
+</html>

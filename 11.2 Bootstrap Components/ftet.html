@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAKE ZONE</title>
+    <style>
+        *{
+            margin:0%;
+            padding:0%;
+            box-sizing: border-box;
+            font-family: 'Josefin-sans',sans-serif;
+        }
+        .hero{
+            background-color:black;
+            height:100vh;
+            width:100%;
+            background-size: cover;
+            background-position: center;
+            background-image:url(/Image/black\ forest\ cupcakes.webp);
+        }
+        nav{
+            align-items: center;
+            justify-content: space-between 20px;
+            padding-left: 8%;
+            padding-right: 8%;
+            padding-top: 45px;
+            display:flex;
+        }
+        nav ul li{
+            padding: 10px 10px;
+            left: 20px;
+            list-style-type: none;
+            display: inline-block;
+            padding-left: 65px;
+            padding-right: 8px;
+        }
+        nav ul li a{
+            font-weight: bold;
+            color:black;
+            text-decoration: none;
+            text-transform: capitalize; 
+            transition: transition.4s;    
+        }
+        nav ul li a:hover{
+            color:#f9004d;
+            transform:scale(1.2);
+        }
+        span{
+            color: orange;
+        }
+        .logo{
+            position:absolute;
+            top:30%;
+            transform:translate(-50%);
+            left:18%;
+        }
+        h1{
+          font-size: 55px;
+          color:black;
+        }
+        h2{
+          font-size: 40px;
+          font-family: Brush script m7;
+        }
+        h3{
+          font-size: 35px;
+          color:black;
+        }
+        .btn{
+            background-color: orange;
+                color:black;
+                text-decoration: none;
+                border:2px solid transparent;
+                font-weight:bold;
+                padding:13px 5px;
+                transition:.4s;
+                width:36%;
+        }
+        .btn:hover{
+                background-color:transparent;
+                border: 2px solid orange;
+                cursor:pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <ul>
+                <li><a href="#"><span>HOME</span></a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">MENU & PRICING</a></li>
+                <li><a href="#">MASTER CHIEFS</a></li>
+                <li><a href="#">PAGES</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+            <h2><span>Super Crispy</span></h2><br>
+            <h1>CAKEZONE</h1><br>
+            <h3>THE BEST CAKE IN INDIA</h3><br>
+            <div class="btn">
+                <a class="button">Read More</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

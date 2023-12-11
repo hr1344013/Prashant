@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* height:100%;
+            width:100%; */
+            background-image:url(/Image/cosmetics.jpg);
+            background-position:center;
+            background-size: cover;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            letter-spacing: .5px;
+        }
+        .main{
+            /* height:100%;
+            width:100%;
+            background-image:url(/Image/fruits\ and\ vegetables.jpg);
+            background-position:center;
+            background-size: cover; */
+        }
+        .card-container{
+            width:7px;
+            height:10%;
+            margin: 4rem auto;
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .card{
+            padding:7px;
+            box-shadow: 0 0 .4rem rgba(0 , 0 , 0 , 0.2);
+            transition: .4s ease-in;
+        }
+        .card:hover{
+            background:rgb(226 , 226 , 226);
+        }
+        .card-heading{
+            color:tomato;
+            margin-bottom: .5rem;
+        }
+        .card-body{
+            color:navy;
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+    <div class="card-container">
+        <div class="card">
+        <h3 class="card-heading">card heading</h3>
+            <p class="card-body">this is card body.</p>
+            </div>
+            </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        const cardData = [
+            {
+                haeding:'GlowGetter Serum:',
+                body:' "Radiance in a Bottle, Unleash Your Inner Glow!"'
+            },
+            {
+                haeding:'Velvet Touch Foundation:',
+                body:'"Smooth as Velvet, Flawless Every Time!"'
+            },
+            {
+                haeding:'Lash Luxe Mascara:',
+                body:'"Lash Out Loud: Luxe Length, Bold Volume!"'
+            },
+            {
+                haeding:'SilkGlo Highlighter:',
+                body:' "Silky Shimmer, Illuminate Your Radiance!"'
+            },
+            {
+                haeding:'PlumpPerfection Lip Gloss:',
+                body:'"Pout Perfection: Plump, Shine, Slay!"'
+            },
+            {
+                haeding:'BlushBloom Cheek Tint:',
+                body:'"Blush to Bloom: Rosy Radiance for Every Hue!"'
+            },
+            {
+                haeding:'InstaFix Setting Spray:',
+                body:'"InstaReady All Day: Fix Your Look, Slay Away!"'
+            },
+            {
+                haeding:'ChicCharcoal Detox Mask:',
+                body:'"Chic Charm, Charcoal Calm: Detox Your Beauty!"'
+            },{
+                haeding:'BrowBabe Precision Pencil:',
+                body:' "Brow Game Strong: Precision that Wows!"'
+            },{
+                haeding:'LuxeLips Lipstick:',
+                body:' "Luxe Lips, Bold Choices: Color Your Confidence!"'
+            },
+            {
+                haeding:'DiamondDust Eyeshadow Palette:',
+                body:'"Eyes That Sparkle: Unleash Your Inner Diamond!"'
+            },{
+                haeding:'SunKissed Bronzer:',
+                body:'"Suns Glow, Yours to Show: Bronzed Beauty!"'
+            },{
+                haeding:'AquaFlare Waterproof Liner:',
+                body:'Slogan: "Aqua Flare: Dive In, Slay On, Never Smudge!"'
+            },
+            {
+                haeding:'DreamyDew Moisturizer:',
+                body:' "Dreamy Skin, Dewy Within: Moisture Magic!"'
+            },
+            {
+                haeding:'GlamGuard Primer:',
+                body:'Glam Guard: Prime, Perfect, Slay the Day!"'
+            },
+        ]
+        const postcontainer = document.querySelector('.card-container');
+
+        const postMethods = ()=>{
+            cardData.map((postData)=>{
+                const postElement = document.createElement('div');
+                postElement.classList.add('card');
+                postElement.innerHTML =`
+
+                <h3 class="card-heading">${postData.haeding}</h3>
+            <p class="card-body">${postData.body}</p>
+            `
+                postcontainer.appendChild(postElement)
+            })
+        }
+        postMethods()
+        </script>
+</body>
+</html>

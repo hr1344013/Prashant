@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding:0%;
+            border:0%;
+            font-family: 'Josefin-sans',sans-serif;
+            box-sizing: border-box;
+        }
+        nav{
+            display:flex;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 45px;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li{
+            padding:10px 25px;
+            display:inline-block;
+            list-style-type:none;
+        }
+        nav ul li a{
+            text-decoration: none;
+            text-transform: capitalize;
+            color:black;
+        }
+        .logo{
+            color: rgb(8, 156, 8);
+            font-size: 35px;
+            margin-right: 450px;
+            transition: transform .4s;
+        }
+        .logo:hover{
+            transform:scale(1.2);
+        }
+        nav ul li a:hover{
+            color:#f9004d;
+            cursor: pointer;
+        }
+        span{
+            color:green;
+        }
+        .ty{
+            color:lightgreen;
+            font-size: 30px;
+        }
+        .uu{
+            color:black;
+            font-size:25px;
+        }
+        .uk{
+            font-size: 15px;
+            color:black;
+        }
+        .ty{
+            font-size: 30px;
+        }
+        .card{
+            border: 10px;
+            background-color:rgb(203, 199, 199) ;
+            height: 365px;
+            width: 1230px;
+            overflow:hidden;
+            padding: 80px 35px;
+            margin:15px;
+            position:center;
+            text-align: left;
+            justify-content: left;
+        }
+        img{
+            border-radius:5px 5px 0px 0px;
+            float:right;
+            width:30%;
+            height:30vh;
+        }
+        </style>
+</head>
+<body>
+    <div class="Hero">
+        <nav>
+            <div class="logo">Zay</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contacts</a></li>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-user"></i>
+            </nav>
+        </div>
+
+        <div class="card">
+            <img src="/Image/newly designed shoe.png">
+            <p class="ty"><span>Zay</span> eCommerce</p>
+            <p class="uu">Tiny and Perfect eCommerce<br>
+                Template
+            </p>
+            <p class="uk">Zay shop is an eCommerce HTML5 CSS template with latest<br>
+                        version of Bootstrap 5(beta 1). This template is 100% free<br>
+                        privided by <span>TemplateMO</span> website . Image credits go to <span>Freepik</span><br>
+                        <span>Stores,unplash</span> and <span>Icons 8</span></p>
+            </div>
+</body>
+</html>
